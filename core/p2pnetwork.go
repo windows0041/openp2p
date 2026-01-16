@@ -613,8 +613,8 @@ func (pn *P2PNetwork) addDirectTunnel(config AppConfig, tid uint64) (t *P2PTunne
 		primaryPunchFunc = funcTCP
 		secondaryPunchFunc = funcUDP
 	} else {
-		primaryPunchFunc = funcTCP
-		secondaryPunchFunc = funcUDP
+		primaryPunchFunc = funcUDP
+		secondaryPunchFunc = funcTCP
 	}
 	if t, err = primaryPunchFunc(); t != nil && err == nil {
 		return t, err
